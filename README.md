@@ -1,7 +1,7 @@
-# Interactive Photo Gallery Challenge
+# COA Taskforce Take-Home Challenge
 
 ## Overview
-This project is an interactive photo gallery and includes solutions to two coding challenges: array manipulation and string transformation.
+This project includes an interactive photo gallery and solutions to two coding challenges: array manipulation and string transformation.
 
 ## Project Structure
 - `index.html`: Main HTML file
@@ -17,5 +17,5 @@ This project is an interactive photo gallery and includes solutions to two codin
 ## Setup Instructions
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/photo-gallery-challenge.git
-   cd photo-gallery-challenge
+   git clone https://github.com/niganze/COA-TASKFORCE-TAKE-HOME-CHALLENGE.git
+   cd COA-TASKFORCE-TAKE-HOME-CHALLENGE
