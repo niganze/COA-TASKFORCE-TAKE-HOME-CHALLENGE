@@ -1,0 +1,154 @@
+
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ============== Base Styles =========== */
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--secondary-clr);
+}
+body {
+  background: var(--primary-clr);
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  /* color variables */
+  --primary-clr: #000000;
+  --secondary-clr: #ffffff;
+  --link-clr: rgb(13, 134, 134);
+  --gray-clr: rgb(116, 126, 126);
+
+  /* width variables */
+  --large-screen: 85%;
+  --medium-screen: 95%;
+  --small-screen: 95%;
+  /* transition */
+  --trans: all 0.3s ease-in-out;
+}
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+h1 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.wrapper {
+  width: var(--large-screen);
+  margin: 0 auto;
+}
+
+/* ============== End of Base Styles =========== */
+
+/* ==================== Gallery Section =============  */
+#photo-gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.2rem;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+}
+.card img {
+  transition: var(--trans);
+}
+.card:hover img {
+  transform: scale(1.1);
+  filter: blur(5px) grayscale(100%);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3rem;
+}
+.overlay:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+.details span,
+i {
+  color: aqua !important;
+}
+.more-info {
+  display: none;
+  color: var(--link-clr);
+  transition: var(--trans);
+}
+.overlay:hover .more-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  transition: var(--trans);
+}
+.details .location {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: var(--gray-clr);
+}
+/* ==================== End of Gallery Section =============  */
+
+/* Media queries for responsiveness */
+
+/* Tablet mode */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .wrapper {
+    width: var(--medium-screen);
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .overlay {
+    padding: 1rem;
+  }
+  .details h1 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+/* Phone mode */
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    width: var(--small-screen);
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .overlay {
+    padding: 0.5rem;
+    display: none;
+  }
+}
+/* End of media queries */
